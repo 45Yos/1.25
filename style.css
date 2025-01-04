@@ -763,11 +763,22 @@ header nav ul li a {
 
     .scroll-container {
         display: none;
-        /* הסרת כפתור הגלילה במסכים קטנים */
     }
 
-    #about,
-    #games {
+    #arrange {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    #weather-widget,
+    #news-iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    #about {
         padding: 10px;
         text-align: center;
         height: auto;
@@ -790,16 +801,27 @@ header nav ul li a {
         font-size: 22px;
     }
 
+    #games {
+        background-position: 0 0;
+        text-align: center;
+        height: auto;
+    }
+
     .game-container {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin: 0 10%;
     }
 
     footer .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .footer-logo h2 {
+        margin: 0 -18%;
     }
 
     footer .footer-links,
