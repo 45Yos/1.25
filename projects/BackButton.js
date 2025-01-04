@@ -1,6 +1,6 @@
 const backToHomeDiv = document.createElement("div");
+backToHomeDiv.id = 'backToHome';
 backToHomeDiv.className = "back-to-home";
-backToHomeDiv.style.marginLeft = '-10%';
 
 const backToHomeLink = document.createElement("a");
 backToHomeLink.href = "../../index.html";
@@ -8,7 +8,7 @@ backToHomeLink.innerText = "Back to Home";
 
 const backToProjectsDiv = document.createElement("div");
 backToProjectsDiv.className = "back-to-home";
-backToProjectsDiv.style.marginLeft = '10%';
+backToProjectsDiv.id = 'backToProjects';
 
 
 const backToProjectsLink = document.createElement("a");
