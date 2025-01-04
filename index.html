@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Days+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nova+Round&family=Protest+Guerrilla&family=Quicksand:wght@300..700&family=Rubik+Vinyl&family=Syncopate:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="./video/backLoopRevers.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <nav>
+
+            <ul>
+                <button id="Play" onclick="stopAudio()">
+                    <img src="./Images/Play.png" alt="Play" style="width: 35px;
+                    height: 35px position absolute; z-index: 1; cursor: pointer;">
+                </button>
+                <p id="PlayText">Pause</p>
+
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#games">Online Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <!-- Intro, First Area -->
+    <h1>Yossi Tsabari - Web Developer</h1>
+
+
+
+    <div class="intro">
+
+        <div id="myFace">
+            <img src="./Images/Yossi-Face.png" alt="">
+        </div>
+        <p>Hi, I'm Yossi Tsabari, a passionate web developer
+
+            with a love for creating intuitive and responsive web applications. <br>
+
+            specialize in front-end and back-end
+            development, <br> bringing ideas to life with clean,
+            efficient code. <br> Skills Languages:
+            HTML,
+            CSS, <br> JavaScript
+
+        </p>
+    </div>
+
+
+
+    <!-- Weather Data -->
+
+    <div id="arrange">
+
+        <div id="weather-widget">
+
+            <h2>Weather Forecast</h2>
+
+            <h3 id="time">Loading... <br>
+                If you can't see the time, <br>
+                please refresh the page</h3>
+
+            <div class="weather-info">
+
+                <div class="weather-temp">
+
+                    <span id="temp" class="temp">No Data, Please refresh</span>
+
+                </div>
+
+                <div class="weather-details" style="padding: 7px;">
+
+                    <p id="humidity"></p>
+
+                    <p id="wind"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- News Ynet -->
+
+        <div id="news" class="news-container">
+            <iframe id="news-iframe">
+            </iframe>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Scroll Down Button -->
+
+    <a href=" .#about" style="text-decoration: none;">
+        <div class="scroll-container">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </a>
+
+
+
+
+
+
+    <!-- Second Area About Me -->
+
+
+    <div id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I’m Yossi Tsabari. I used to be a video editor, and now I’m a web developer. I’m 34 years old and
+            live
+            in Petah
+            Tikva, Israel. I’m single and live with Sam, my dog. I have both a motorcycle and a car.
+
+            I love quiet places and relaxation. I enjoy gaming and I am really curious about space exploration,
+            which is
+            why my
+            website design is inspired by it. I also love movies and music.
+
+            I’m always striving to be the best.
+
+        </p>
+
+    </div>
+
+
+
+
+
+    <!-- Third Area, Gallery -->
+
+    <div id="gallery">
+        <h2>Gallery</h2>
+    </div>
+
+
+
+
+    <!-- Fourth Area, Games Gallery -->
+    <div id="games">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Last Area, Footer Section -->
+
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2 style="font-size: 15px; margin-left: -30%;">Yossi Tsabari - Web Developer</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#top">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <div class="footer-socials">
+                <!-- <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a> -->
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Yossi Tsabari Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

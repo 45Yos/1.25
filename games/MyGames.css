@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url(../Images/GameProjects.webp) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    background: linear-gradient(90deg, #7fdbff68, #ff6ec774);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 110, 199, 0.3), 0 4px 15px rgba(127, 219, 255, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Projects Container */
+.projects-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
+    gap: 30px;
+    margin: 3% auto;
+    max-width: 1000px;
+}
+
+/* Project Card Styles */
+.project-card {
+    width: 80%;
+    background: rgba(28, 25, 48, 0.642);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.553);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: rgba(28, 25, 48, 0.988);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.project-title {
+    color: #d7d1f4;
+    text-shadow: 0px 0px 2px rgb(22, 51, 47);
+}
+
+
+
+/* Back to home button */
+#backButton {
+    padding: 12px 30px;
+    background: linear-gradient(to right, #50c9c3, #f8ffae);
+    color: #141e30;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 3%;
+    position: fixed;
+    bottom: 10%;
+
+    right: 45%;
+}
+
+#backButton:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff9a9e, #f8ffae);
+    box-shadow: 0 4px 15px rgba(255, 110, 199, 0.5), 0 4px 15px rgba(127, 219, 255, 0.5);
+}
+
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+    margin-top: 1.75%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #d4d4d4;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+@media (max-width: 450px) {
+    body {
+        width: 90%;
+    }
+
+    header {
+        padding: 0;
+        width: 95%;
+        margin: 7%;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 15px;
+        margin: 0 7%;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    #backButton {
+        padding: 1%;
+        font-size: 15px;
+        right: 35%;
+    }
+
+
+
+    footer {
+        font-size: 12px;
+    }
+}

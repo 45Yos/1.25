@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+body {
+    background-color: #E5EEFF;
+}
+
+#headDiv {
+    background-color: #E5EEFF;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 70%;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 300px 300px 300px 300px;
+    gap: 1.5%;
+
+}
+
+
+
+
+/*סידור הגריד*/
+
+#in1 {
+    background-color: #020253;
+    grid-area: 1 / 1 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#in1 h1 {
+    margin-bottom: 30px;
+    color: #0EE1DA;
+    font-family: 'Assistant';
+    font-size: 60px;
+}
+
+#in1 p {
+    width: 70%;
+    text-align: center;
+    font-family: 'Assistant';
+    font-size: 20px;
+}
+
+
+/*עד כאן דיב ראשון (כחול) לא רספונסיב */
+
+
+
+#in1-1 {
+    background-color: #020253;
+    grid-area: 1 / 1 / 3 / 3;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+#in1-1 h1 {
+    margin-bottom: 30px;
+    color: #0EE1DA;
+    font-family: 'Assistant';
+    font-size: 60px;
+}
+
+#in1-1 p {
+    width: 70%;
+    text-align: center;
+    font-family: 'Assistant';
+    font-size: 20px;
+}
+
+
+
+
+#in2 {
+
+    background-image: url(./images/Rectangle\ 514.png);
+    background-size: cover;
+}
+
+#in3 {
+    background-image: url(./images/Rectangle\ 515.png);
+    background-size: cover;
+}
+
+#in4 {
+    background-image: url(./images/Rectangle\ 506.png);
+    background-size: cover;
+}
+
+#in5 {
+    background-image: url(./images/Rectangle\ 516.png);
+    background-size: cover;
+}
+
+#in6 {
+    background-image: url(./images/Rectangle\ 506-1.png);
+    background-size: cover;
+}
+
+
+#in7 {
+    background-image: url(./images/Rectangle\ 506-2.png);
+    background-size: cover;
+}
+
+#in8 {
+    background-image: url(./images/Rectangle\ 506-3.png);
+    background-size: cover;
+}
+
+
+#in9 {
+    background-image: url(./images/Rectangle\ 506-4.png);
+    background-size: cover;
+}
+
+
+#in10 {
+    background-image: url(./images/Rectangle\ 506-5.png);
+    background-size: cover;
+}
+
+
+#in11 {
+    background-image: url(./images/Rectangle\ 506-6.png);
+    background-size: cover;
+}
+
+
+
+#in12 {
+    grid-area: 4 / 3 / 7 / 5;
+    background-color: #8E097C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Assistant';
+}
+
+#in12 h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+#in12 p {
+    color: white;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#in12 form {
+    width: 70%;
+}
+
+#in12 label {
+    color: #0EE1DA;
+    font-family: 'heebo';
+}
+
+.inputin12 {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    background-color: #E5EEFF;
+    border: 0;
+    border-bottom: 4px solid #0EE1DA;
+}
+
+
+#exp {
+    width: 100%;
+    height: 200px;
+    background-color: #E5EEFF;
+    border: 0;
+    border-bottom: 4px solid #0EE1DA;
+}
+
+
+.buttin12 {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    background-color: #0EE1DA;
+    font-family: 'heebo';
+    color: #011560;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+
+
+#in13 {
+    background-image: url(./images/Rectangle\ 506-7.png);
+    background-size: cover;
+}
+
+
+#in14 {
+    background-image: url(./images/Rectangle\ 506-8.png);
+    background-size: cover;
+}
+
+
+#in15 {
+    background-image: url(./images/Rectangle\ 506-9.png);
+    background-size: cover;
+}
+
+
+#in16 {
+    background-image: url(./images/Rectangle\ 513.png);
+    background-size: cover;
+}
+
+
+
+
+@media (max-width: 450px) {
+    #headDiv {
+        width: 90%;
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        height: auto;
+    }
+
+    #in1 {
+        grid-area: auto;
+        order: 1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #in1 h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #in1 p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    #in1-1 {
+        display: flex;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #in1-1 h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #in1-1 p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .resp {
+        height: 150px;
+    }
+
+    #in12 {
+        grid-area: auto;
+        order: 2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #in12 h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    #in12 p {
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .inputin12,
+    #exp {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    #exp {
+        height: 100px;
+    }
+
+    .buttin12 {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(10, 10, 30, 0.9), rgba(20, 20, 50, 0.8));
+    border: 2px solid rgba(100, 100, 200, 0.8);
+    border-radius: 50px;
+    padding: 15px 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 99;
+}
+
+.back-to-home a {
+    text-decoration: none;
+    color: rgba(180, 180, 255, 0.9);
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-home:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(100, 100, 255, 0.6);
+}
+
+.back-to-home:hover a {
+    color: rgba(220, 220, 255, 1);
+}
+
+
+@media (max-width: 450px) {
+    .back-to-home {
+        transform: scale(0.5);
+        left: 0;
+        bottom: 0;
+
+    }
+
+    .back-to-home:hover {
+        transform: scale(0.6);
+    }
+}
