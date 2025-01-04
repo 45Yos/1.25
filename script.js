@@ -321,7 +321,7 @@ galleryIconPage('coffee');
 galleryIconPage('discover');
 galleryIconPage('forward');
 galleryIconPage('here-now');
-galleryIconPage('letus');
+galleryIconPage('let-us');
 
 
 const link = () => {
