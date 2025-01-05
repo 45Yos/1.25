@@ -181,6 +181,14 @@ body {
     color: rgba(220, 220, 255, 1);
 }
 
+#backToHome {
+    margin: auto -10%;
+}
+
+#backToProjects {
+    margin: auto 10%;
+}
+
 
 
 
@@ -218,13 +226,27 @@ body {
     }
 
     .back-to-home {
+        transform: scale(0.7);
+        width: 250px;
         padding: 10px 20px;
         font-size: 1.2rem;
+    }
+
+    .back-to-home:hover {
+        transform: scale(0.8);
     }
 
     .back-to-home a {
         font-size: 1.2rem;
         letter-spacing: 1px;
+    }
+
+    #backToHome {
+        margin: auto -55%;
+    }
+
+    #backToProjects {
+        margin-left: -5%;
     }
 
     .show-landing-btn {

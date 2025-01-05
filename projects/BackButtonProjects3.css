@@ -46,13 +46,14 @@
 @media (max-width: 450px) {
 
     .back-to-home {
-        transform: scale(0.5);
-        width: 200px;
+        padding: 5px 10px;
+        transform: scale(0.4);
+        width: 260px;
     }
 
     #backToProjects {
-        width: 270px;
-        margin: 0 32%;
+        width: 350px;
+        margin: 0 30%;
         z-index: 99;
     }
 
