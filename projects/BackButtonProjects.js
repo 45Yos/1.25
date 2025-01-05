@@ -21,7 +21,7 @@ backToProjects.onclick = pageBack;
 
 const backToProjectsLink = document.createElement("a");
 backToProjectsLink.href = '#';
-backToProjectsLink.innerText = "Back to Last Page";
+backToProjectsLink.innerText = "Return to Last Page";
 
 
 

@@ -128,18 +128,28 @@ footer {
 
 
 @media (max-width: 450px) {
+
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
     header {
         padding: 0;
+        border-radius: 8%;
     }
 
     header h1 {
         font-size: 1.5rem;
         padding: 10px;
-        margin-right: -20px;
     }
 
     .projects-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 440px;
         padding: 10px;
     }
 

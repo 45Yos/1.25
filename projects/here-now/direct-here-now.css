@@ -226,10 +226,14 @@ body {
     }
 
     .back-to-home {
-        transform: scale(0.6);
+        transform: scale(0.7);
         width: 250px;
         padding: 10px 20px;
         font-size: 1.2rem;
+    }
+
+    .back-to-home:hover {
+        transform: scale(0.8);
     }
 
     .back-to-home a {
@@ -238,11 +242,11 @@ body {
     }
 
     #backToHome {
-        margin: auto -60%;
+        margin: auto -55%;
     }
 
     #backToProjects {
-        margin-left: -10%;
+        margin-left: -5%;
     }
 
     .show-landing-btn {

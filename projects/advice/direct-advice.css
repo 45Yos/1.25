@@ -160,7 +160,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 99;
-
 }
 
 .back-to-home a {
@@ -180,6 +179,14 @@ body {
 
 .back-to-home:hover a {
     color: rgba(220, 220, 255, 1);
+}
+
+#backToHome {
+    margin: auto -10%;
+}
+
+#backToProjects {
+    margin: auto 10%;
 }
 
 
@@ -204,6 +211,7 @@ body {
         margin-bottom: 5%;
     }
 
+
     #language-logos {
         transform: scale(0.6);
         margin-top: -70px;
@@ -218,13 +226,27 @@ body {
     }
 
     .back-to-home {
+        transform: scale(0.7);
+        width: 250px;
         padding: 10px 20px;
         font-size: 1.2rem;
+    }
+
+    .back-to-home:hover {
+        transform: scale(0.8);
     }
 
     .back-to-home a {
         font-size: 1.2rem;
         letter-spacing: 1px;
+    }
+
+    #backToHome {
+        margin: auto -55%;
+    }
+
+    #backToProjects {
+        margin-left: -5%;
     }
 
     .show-landing-btn {
