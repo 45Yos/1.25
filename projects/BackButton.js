@@ -12,7 +12,7 @@ backToProjectsDiv.id = 'backToProjects';
 
 
 const backToProjectsLink = document.createElement("a");
-backToProjectsLink.href = "../myProjects.html";
+backToProjectsLink.href = "../myprojects.html";
 backToProjectsLink.innerText = "Back to Projects";
 
 
