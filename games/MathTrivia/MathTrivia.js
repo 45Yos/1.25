@@ -58,6 +58,7 @@ welcomeScreen.appendChild(userInput);
 
 // Welcome Description
 const welcomeDescription = document.createElement('p');
+welcomeDescription.id = 'welcomeP';
 
 // User Title In Headline
 const userTitle = document.getElementById('userTitle');
@@ -92,7 +93,6 @@ submitUser.addEventListener('click', () => {
         userTitle.innerHTML = `Good Luck, ${user}!`;
 
 
-        welcomeDescription.id = 'welcomeP';
         welcomeDescription.innerHTML = `Welcome <span id='userText'> ${user} </span> To Math Trivia, You Will Be Given 10 Questions, Each Question Will Be A Math Problem, Try To Solve Them All Correctly, Good Luck!`;
 
         welcomeScreen.appendChild(welcomeDescription);
@@ -160,6 +160,7 @@ answerInput.addEventListener('keydown', (event) => {
 
 let questionsArray = [];
 const counterText = document.getElementById('count');
+counterText.id = 'counterText';
 
 
 const questions = () => {

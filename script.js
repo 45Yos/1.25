@@ -375,6 +375,7 @@ const createGameCard = (source, title) => {
 
     const gameImage = document.createElement("img");
     gameImage.src = `./games/${source}/images/${source}.png`;
+    gameImage.alt = `${source}`;
     gameCard.appendChild(gameImage);
 
     const gamesTitle = document.createElement("h3");

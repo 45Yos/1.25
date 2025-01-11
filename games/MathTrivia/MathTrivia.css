@@ -427,3 +427,106 @@
      gap: 1px;
      margin-top: 6%;
  }
+
+
+
+
+ @media screen and (max-width: 450px) {
+     body {
+         font-size: 14px;
+         padding: 10px;
+     }
+
+     #welcomeScreen {
+         width: 80%;
+         height: 100%;
+         background-size: 2100px;
+         background-position: center;
+         background-repeat: no-repeat;
+         padding: 20px;
+     }
+
+     #welcomeTitle {
+         margin-top: 35%;
+         font-size: 50px;
+         text-shadow: 0 0 5px #ff6b81, 0 0 10px #ff6b81;
+     }
+
+     #warning {
+         font-size: 40px;
+     }
+
+     #userInput {
+         width: 90%;
+         height: 40px;
+         font-size: 16px;
+         margin: auto -5%;
+     }
+
+     #submitUser {
+         width: 90%;
+         height: 50px;
+         font-size: 18px;
+     }
+
+     #welcomeP {
+         font-size: 25px;
+         margin-top: 35%;
+     }
+
+
+     #startGameButton {
+         width: 100%;
+         height: 40px;
+         font-size: 18px;
+         margin-top: 45%;
+     }
+
+     #musicButton {
+         top: 80%;
+         right: 30%;
+     }
+
+     #counterText {
+         color: white;
+         position: absolute;
+         top: 23%;
+         left: 30%;
+     }
+
+     .quiz-header h1 {
+         font-size: 1.5rem;
+     }
+
+     .questions-container {
+         width: 100%;
+     }
+
+     .question h2 {
+         font-size: 1.2rem;
+     }
+
+     .question input {
+         font-size: 14px;
+         width: 100%;
+     }
+
+     .submit-btn {
+         font-size: 1rem;
+         padding: 10px 20px;
+     }
+
+     .results h3 {
+         font-size: 1.2rem;
+     }
+
+     .results p {
+         font-size: 1rem;
+     }
+
+     #startAllOver {
+         width: 100%;
+         height: 50px;
+         font-size: 16px;
+     }
+ }
