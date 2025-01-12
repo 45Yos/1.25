@@ -3,7 +3,7 @@ let backgroundMusic = new Audio('./Sound/BackGroundMusic.mp3');
 
 if (backgroundMusic) {
     backgroundMusic.play();
-    backgroundMusic.volume = 0.5;
+    backgroundMusic.volume = 0.2;
     backgroundMusic.loop = true;
 }
 
@@ -15,14 +15,6 @@ if (backgroundMusic) {
 //Create Main Div
 const mainDiv = document.createElement('div');
 mainDiv.id = 'mainDiv';
-mainDiv.style.width = '80%';
-mainDiv.style.height = '80vh';
-mainDiv.style.border = '15px groove white';
-mainDiv.style.boxShadow = '5px 5px 15px 15px white';
-mainDiv.style.display = 'flex';
-mainDiv.style.justifyContent = 'center';
-mainDiv.style.alignItems = 'center';
-mainDiv.style.margin = '0 auto';
 
 
 
@@ -60,36 +52,29 @@ const startGame = () => {
 
 //Creating Game Start Animated Title
 const gameTitle = document.createElement('img');
+gameTitle.id = 'gameTitle';
 gameTitle.src = './images/MemoryTitleGif.gif';
-gameTitle.style.marginTop = '-30%';
-gameTitle.style.width = '30%';
 
 
 
 //Creating Creator Credits
 const creatorCredits = document.createElement('h2');
+creatorCredits.id = 'creatorCredits';
 creatorCredits.textContent = 'By Yossi Tsabari';
-creatorCredits.style.position = 'absolute';
-creatorCredits.style.width = '30%';
-creatorCredits.style.textAlign = 'center';
-creatorCredits.style.fontSize = '40px';
 creatorCredits.style.color = 'white';
 creatorCredits.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
 
 
 
 
+
+
+
+
 //Creating Start Game Button
 const startGameButton = document.createElement('button');
+startGameButton.id = 'startGameButton';
 startGameButton.textContent = 'Start Game';
-startGameButton.style.width = '30%';
-startGameButton.style.height = '10%';
-startGameButton.style.fontSize = '30px';
-startGameButton.style.background = 'linear-gradient(135deg, #3a1c71, #131648, #ffaf7b)';
-startGameButton.style.color = 'white';
-startGameButton.style.border = '5px groove white';
-startGameButton.style.borderRadius = '10px';
-startGameButton.style.cursor = 'pointer';
 startGameButton.addEventListener('click', startGame);
 
 
@@ -128,6 +113,8 @@ const animateTitle = () => {
 
 
 
+const gameContainer = document.createElement('div');
+gameContainer.id = 'gameContainer';
 
 
 
@@ -177,20 +164,6 @@ const renderBoard = () => {
     gameBoard.forEach((card, index) => {
         const cardElement = document.createElement('div');
         cardElement.className = 'card';
-        cardElement.style.border = '1px solid white';
-        cardElement.style.width = '100px';
-        cardElement.style.height = '120px';
-        cardElement.style.display = 'flex';
-        cardElement.style.justifyContent = 'center';
-        cardElement.style.alignItems = 'center';
-        cardElement.style.margin = '15px';
-        cardElement.style.marginLeft = '25%';
-        cardElement.style.marginTop = '5%';
-        cardElement.style.cursor = 'pointer';
-        cardElement.style.backgroundImage = 'url(./images/BackCard.png)';
-        cardElement.style.backgroundSize = 'cover';
-        cardElement.style.backgroundPosition = 'center';
-        cardElement.style.backgroundRepeat = 'no-repeat';
 
         // הוספת אירוע לחיצה
         cardElement.addEventListener('click', () => flipCard(index));
@@ -202,11 +175,10 @@ const renderBoard = () => {
             cardElement.style.backgroundImage = `url(${card.value})`;
             cardElement.style.backgroundSize = 'cover';
             cardElement.style.backgroundRepeat = 'no-repeat';
-            cardElement.style.backgroundPosition = 'center';
-
-            cardElement.style.height = '120px';
         } else {
             cardElement.style.backgroundImage = 'url(./images/BackCard.png)'; // תמונת קלף סגור
+            cardElement.style.backgroundSize = 'cover';
+            cardElement.style.backgroundRepeat = 'no-repeat';
         }
 
 
@@ -270,19 +242,8 @@ const checkMatch = () => {
     flippedCards = [];
 };
 
-// יצירת אלמנט דינמי לדף
 
-const gameContainer = document.createElement('div');
-gameContainer.id = 'gameContainer';
-gameContainer.style.display = 'grid';
-gameContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
-gameContainer.style.width = '70%';
-gameContainer.style.height = '90%';
-gameContainer.style.marginLeft = '5%';
-gameContainer.style.gap = '10px';
-gameContainer.style.borderRadius = '7%';
-gameContainer.style.backgroundImage = 'url(./images/PlatformBackgroundImage.jpg)';
-gameContainer.style.border = '2px dashed white';
+
 
 
 mainDiv.appendChild(gameContainer);

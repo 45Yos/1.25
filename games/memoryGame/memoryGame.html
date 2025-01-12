@@ -48,6 +48,119 @@
                 background-position: 0% 50%;
             }
         }
+
+
+        #mainDiv {
+            width: 80%;
+            height: 80vh;
+            border: 15px groove white;
+            box-shadow: 5px 5px 15px 15px white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+
+
+
+        #creatorCredits {
+            width: 30%;
+            text-align: center;
+            position: absolute;
+            font-size: 40px;
+        }
+
+        #gameTitle {
+            width: 30%;
+            margin-top: -30%;
+        }
+
+
+        #startGameButton {
+            width: 30%;
+            height: 10%;
+            font-size: 30px;
+            background: linear-gradient(135deg, #3a1c71, #131648, #ffaf7b);
+            color: white;
+            border: 5px groove white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .card {
+            width: 50%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            margin-left: 25%;
+            margin-top: 5%;
+            cursor: pointer;
+            background-image: url(./images/BackCard.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        #gameContainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 50%;
+            height: 100%;
+            margin-top: -2%;
+            margin-left: 5%;
+            gap: 5px;
+            border-radius: 1%;
+            background-image: url(./images/PlatformBackgroundImage.jpg);
+            background-size: cover;
+            background-position: center;
+            border: 2px dashed white;
+        }
+
+
+        @media screen and (max-width: 450px) {
+
+            #creatorCredits {
+                width: 300px;
+                top: 0;
+            }
+
+
+            #gameTitle {
+                width: 300px;
+                margin-top: -50%;
+                position: absolute;
+            }
+
+
+            #startGameButton {
+                width: 300px;
+                margin-top: 30%;
+            }
+
+            #mainDiv {
+                width: 100%;
+                height: 70%;
+                margin: 0 auto;
+            }
+
+
+            #gameContainer {
+                width: 100%;
+                margin: 0 auto;
+                padding-left: 15%;
+            }
+
+
+            .card {
+                margin: auto -35%;
+                height: 90px;
+                width: 70px;
+            }
+        }
     </style>
 </head>
 
