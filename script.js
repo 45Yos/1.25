@@ -394,6 +394,7 @@ const createGameCard = (source, title) => {
 createGameCard('memoryGame', 'Memory Game');
 createGameCard('screenBuilder', 'Screen Builder');
 createGameCard('MathTrivia', 'Math Trivia');
+createGameCard('MixDrix', 'MixDrix');
 
 
 

@@ -37,6 +37,7 @@ const createProjectCard = (source, title) => {
 createProjectCard('memoryGame', 'Memory Game');
 createProjectCard('screenBuilder', 'Screen Builder');
 createProjectCard('MathTrivia', 'Math Trivia');
+createProjectCard('MixDrix', 'MixDrix');
 
 
 

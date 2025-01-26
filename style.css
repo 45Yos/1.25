@@ -572,6 +572,10 @@ header nav ul li a {
     box-sizing: border-box;
     background-attachment: fixed;
     padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #games h2 {
@@ -584,8 +588,10 @@ header nav ul li a {
 .game-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    width: 60%;
 }
 
 .game {

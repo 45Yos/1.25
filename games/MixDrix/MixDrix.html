@@ -6,26 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./MixDrix.css">
+    <link rel="stylesheet" href="../BackButtonGames.css">
     <script src="./MixDrix.js" defer></script>
+    <script src="../BackButtonGames.js" defer></script>
 </head>
 
 <body>
-    <div id="game">
-        <h1>Tic Tac Toe</h1>
-        <div id="board">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
-        </div>
-        <p id="winner"></p>
-        <button id="reset">Restart</button>
+
+
+
+
+    <h1>Tic Tac Toe</h1>
+
+    <div id="mainGame">
+        <div class="gameDiv" id="1"></div>
+        <div class="gameDiv" id="2"></div>
+        <div class="gameDiv" id="3"></div>
+        <div class="gameDiv" id="4"></div>
+        <div class="gameDiv" id="5"></div>
+        <div class="gameDiv" id="6"></div>
+        <div class="gameDiv" id="7"></div>
+        <div class="gameDiv" id="8"></div>
+        <div class="gameDiv" id="9"></div>
+
     </div>
+
+
+    <div id="playerScore">
+
+        <h2 id="playerTitle">Player Score</h2>
+
+        <div class="score">
+
+            <div id="leftScorePlayer" class="insideScoreLeft insideScore"></div>
+            <div id="insidePlayerScore" class="insideScoreRight insideScore"></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="opponentScore">
+
+        <h2>Opponent Score</h2>
+
+        <div class="score">
+
+            <div id="leftScoreOpponent" class="insideScoreLeft insideScore"></div>
+            <div id="insideOpponentScore" class="insideScoreRight insideScore"></div>
+
+        </div>
+
+    </div>
+
+    <div id="imageDiv">
+        <img src="./images/PinkSoldier.png" alt="" width="700">
+    </div>
+
+
+    <div id="iWantToQuit">
+        <button id="quitButton">Let Me Out!!</button>
+    </div>
+
 </body>
 
 </html>

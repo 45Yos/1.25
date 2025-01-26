@@ -1,49 +1,747 @@
 body {
-    font-family: Arial, sans-serif;
+    background-image: url(./images/TicTacBackground.webp);
+    background-size: cover;
+}
+
+
+#warnningScreen {
+    width: 99.8%;
+    height: 99.6%;
+    color: black;
+    font-size: 40px;
     text-align: center;
-    background-color: #f0f8ff;
-    margin: 0;
-    padding: 0;
+    background-color: white;
+    background-size: cover;
+    border: 2px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
 }
 
-#game {
-    margin: 50px auto;
-    max-width: 300px;
+#startGameScreen {
+    width: 50%;
+    height: 60%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    background-color: black;
+    background-size: cover;
+    border: 2px solid white;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    z-index: 9999;
 }
 
-#board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 5px;
-    margin: 20px auto;
+
+#startGameDisclaimer {
+    font-size: 30px;
+    color: white;
+    width: 80%;
+    margin: auto auto 7% auto;
+    transform: scale(0.9);
 }
 
-.cell {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    border: 1px solid #000;
+
+#startButton {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #c70039, #900c3f);
+    border: 3px solid white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ffcccc, 0 0 20px #ff6666;
+    box-shadow: 0 4px 15px rgba(255, 102, 102, 0.5);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#startButton:hover {
+    background: linear-gradient(145deg, #900c3f, #c70039);
+    box-shadow: 0 0 5px #ff0000, 0 0 5px #ff6666, 0 0 6px #ffcccc;
+    transform: scale(1.1);
+}
+
+#startButton:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(255, 102, 102, 0.5);
+}
+
+
+
+#musicButton {
+    position: absolute;
+    top: 3%;
+    right: 46%;
+    z-index: 8;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(55deg, rgba(255, 255, 255, 0.4), #0c6f46);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#welcomeScreen {
+    width: 90%;
+    height: 90%;
+    background: url(./images/welcomeBack.webp) no-repeat center center fixed;
+    background-size: cover;
+    border: 2px solid white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 9;
+}
+
+
+#welcomeTitle {
+    color: white;
+    text-align: center;
+    z-index: 9999;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    text-shadow: 0 0 10px #ff6b81, 0 0 10px #ff6b81, 0 0 10px #ff6b81, 0 0 20px #ff6b81, 0 0 50px #ff6b81, 0 0 60px #ff6b81, 0 0 70px #ff6b81;
+    /*animate Text*/
+    font-family: 'Brush Script MT', cursive;
+    animation: textAnimation 3s ease-in-out infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+
+
+#welcomeText {
+    color: white;
+    text-align: center;
+    z-index: 9999;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-shadow: 0 0 10px #05815c, 0 0 10px #05815c, 0 0 10px #ff6b81, 0 0 20px #ff6b81, 0 0 50px #ff6b81, 0 0 60px #ff6b81, 0 0 70px #ff6b81;
+}
+
+
+#headTextDiv {
+    width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+}
+
+.textDiv {
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px black, 0 0 10px black, 0 0 10px #11915c, 0 0 10px black, 0 0 20px #11915c;
+}
+
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: changeLetter 1s forwards;
+    font-size: 50px;
+}
+
+@keyframes changeLetter {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.buttonImage {
+    position: absolute;
+    top: 75%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.buttonImage:hover {
+    transition: 0.3s;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transform: scale(1.2) !important;
+
 }
 
-.cell:hover {
-    background-color: #e0e0e0;
+
+
+#xImage {
+    left: 35%;
 }
 
-#reset {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+h1 {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+#mainGame {
+    width: 27%;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: auto;
+    gap: 0.2%;
+
+}
+
+
+#mainGame div {
+    background-color: rgba(255, 69, 100, 0.787);
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+
+#mainGame div:hover {
     cursor: pointer;
+    transform: scale(1.04);
 }
 
-#winner {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #333;
+
+.gameDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+}
+
+
+#playerScore {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    text-shadow: #11915c 0 0 10px, 0 0 10px #11915c;
+    text-align: center;
+    border: 2px solid yellowgreen;
+    width: 25%;
+    height: 300px;
+    background: url(./images/BackScore.jpg) no-repeat center center fixed;
+    background-size: cover;
+    box-shadow: 2px 2px 4px black, 0 0 10px white;
+}
+
+
+#opponentScore {
+    box-shadow: 2px 2px 4px black, 0 0 10px white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    text-shadow: red 0 0 10px;
+    text-align: center;
+    border: 2px solid red;
+    width: 25%;
+    height: 300px;
+    background: url(./images/BackScore.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 80px;
+}
+
+
+
+.insideScore {
+    border: 1px solid white;
+    width: 13%;
+    margin: 3% 0;
+    height: 100px;
+    color: white;
+
+}
+
+
+#imageDiv {
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+}
+
+
+#quitButton {
+    position: absolute;
+    top: 80%;
+    left: 37.5%;
+    padding: 20px 160px;
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #000000, #2c2c2c);
+    border: 3px solid #ff0055;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(255, 0, 85, 0.5), inset 0px 0px 10px #ff0055;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#quitButton:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(circle, rgba(255, 0, 85, 0.7) 10%, rgba(0, 0, 0, 0) 70%);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 0;
+}
+
+#quitButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 0, 85, 0.8), inset 0px 0px 15px #ff0055;
+}
+
+#quitButton:hover:before {
+    opacity: 0.2;
+    transform: scale(1.1);
+}
+
+#quitButton:after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 30px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%);
+    transform: rotate(45deg);
+    z-index: 1;
+    opacity: 0.7;
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+        margin: auto;
+    }
+
+    50% {
+        transform: scale(1.1);
+        margin: auto;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#winImage {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    height: 50%;
+    clip-path: inset(0 0 80px 0);
+    z-index: 9999;
+    transform: scale(0.6);
+}
+
+
+#loseImage {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    height: 50%;
+    clip-path: inset(0 0 80px 0);
+    z-index: 9999;
+}
+
+
+#drawImage {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 50%;
+    z-index: 9999;
+    transform: scale(0.8);
+}
+
+#resultText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 20px black, 0 0 50px black, 0 0 60px black, 0 0 70px black;
+    z-index: 99999;
+}
+
+
+#sumDiv {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 50px;
+    color: white;
+    text-shadow: #05815c 0 0 10px, #ff6b81 0 0 10px, #ff6b81 0 0 10px, white 0 0 20px, white 0 0 50px, white 0 0 60px, white 0 0 70px;
+    text-align: center;
+    border: 2px solid black;
+    box-shadow: 0 0 10px #11915c, 0 0 10px #11915c;
+    width: 20%;
+    height: 50px;
+    background: url(./images/Sum\ Background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+}
+
+#sumDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+#sumDiv>* {
+    position: relative;
+    z-index: 2;
+}
+
+#sumPlayerScore {
+    margin: 7% auto;
+    font-size: 80px;
+    color: #11915c;
+    text-shadow: 0 0 10px black, 0 0 10px black;
+}
+
+
+
+
+#playAgainButton {
+    position: absolute;
+    top: 85%;
+    left: 36%;
+    padding: 20px 160px;
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #000000, #2c2c2c);
+    border: 3px solid #0c6f46;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0px 2px 5px #11915c, inset 0px 0px 5px #ff0055;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    z-index: 9999999;
+}
+
+
+
+
+@media (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    #musicButton {
+        display: none;
+    }
+
+    #warnningScreen {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #pleaseNote {
+        font-size: 50px;
+        color: black;
+    }
+
+
+    #startGameScreen {
+        text-align: center;
+        width: 300px;
+        left: 15%;
+    }
+
+    #startGameDisclaimer {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 12%;
+    }
+
+    #startButton {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    #volumeRange {
+        width: 80%;
+    }
+
+    #welcomeScreen {
+        text-align: center;
+
+    }
+
+    #welcomeTitle {
+        font-size: 31px;
+    }
+
+    #welcomeText {
+        font-size: 30px;
+    }
+
+    #chooseDiv {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    #xImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        left: 20%;
+    }
+
+    #oImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .buttonImage.show {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    h1 {
+        color: white;
+    }
+
+    #mainGame {
+        margin: auto;
+        width: 70%;
+        height: 100%;
+    }
+
+    #mainGame div {
+        width: 100%;
+        height: 100px;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #000;
+    }
+
+    #playerScore {
+        font-size: 12px;
+        top: 60%;
+        right: 5%;
+        width: 40%;
+        height: 120px;
+    }
+
+    #opponentScore {
+        font-size: 12px;
+        top: 60%;
+        right: 5%;
+        width: 40%;
+        height: 120px;
+    }
+
+
+    .insideScore {
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #winImage {
+        top: 22%;
+        left: 25%;
+        transform: scale(0.9);
+    }
+
+    #loseImage {
+        top: 5%;
+        transform: scale(0.8);
+        left: 25%;
+    }
+
+
+    #drawImage {
+        left: 20%;
+        transform: scale(1.3);
+    }
+
+
+    #resultText {
+        top: 40%;
+        font-size: 18px;
+    }
+
+    #quitButton {
+        padding: 20px;
+        font-size: 15px;
+        top: 85%;
+        left: 35%;
+
+    }
+
+    #quitButton:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 2px rgba(255, 0, 85, 0.8), inset 0px 0px 5px #ff0055;
+    }
+
+    #quitButton::after {
+        background: none;
+    }
+
+    #sumDiv {
+        text-align: center;
+    }
+
+    #sumTitle {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    #sumPlayerScore {
+        margin-top: 20%;
+        font-size: 20px;
+    }
+
+    #playAgainButton {
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin: 0 -2%;
+    }
+
+    #textDiv1,
+    #textDiv2,
+    #textDiv3 {
+        font-size: 14px;
+    }
+
+    .letter {
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #winImage,
+    #loseImage,
+    #drawImage {
+        width: 200px;
+        height: auto;
+    }
 }
