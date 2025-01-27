@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#logInScreen {
+    display: flex;
+    height: 100vh;
+    background-color: #dffcff8f;
+}
+
+
+#logInDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 50vh;
+    top: 20%;
+    left: 35%;
+    border: 2px solid #0f0f56;
+    border-radius: 100px;
+}
+
+
+#formDiv {
+    direction: ltr;
+    width: 80%;
+    margin: 8%;
+}
+
+
+.loginFormText {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+
+.loginFormInput {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+
+#logInButton {
+    width: 25%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+#notSingedUpText {
+    margin: 10px 0;
+    font-size: 1em;
+    color: darkblue;
+    font-weight: 900;
+}
+
+
+
+#signUpButton {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1.2em;
+    background-color: #0f0f56;
+    color: white;
+    cursor: pointer;
+}

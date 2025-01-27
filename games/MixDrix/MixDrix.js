@@ -381,13 +381,13 @@ welcomeScreen.appendChild(aO);
 
 
 const xImage = document.createElement('img');
-xImage.src = './images/X.jpg';
+xImage.src = './images/x.jpg';
 xImage.id = 'xImage';
 xImage.className = 'buttonImage';
 
 
 const oImage = document.createElement('img');
-oImage.src = './images/O.jpg';
+oImage.src = './images/o.jpg';
 oImage.id = 'oImage';
 oImage.className = 'buttonImage';
 
