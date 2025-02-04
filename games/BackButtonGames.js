@@ -13,7 +13,7 @@ backToProjectsDiv.id = 'backToProjects';
 
 const backToProjectsLink = document.createElement("a");
 backToProjectsLink.href = "../MyGames.html";
-backToProjectsLink.innerText = "Back to Games";
+backToProjectsLink.innerText = "Back to Java Projects";
 
 
 backToHomeDiv.appendChild(backToHomeLink);
