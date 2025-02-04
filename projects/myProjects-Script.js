@@ -40,7 +40,6 @@ createProjectCard('discover');
 createProjectCard('forward');
 createProjectCard('here-now');
 createProjectCard('let-us');
-createProjectCard('countriesFlags');
 
 
 

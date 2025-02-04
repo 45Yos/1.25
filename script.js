@@ -348,7 +348,7 @@ if (count >= 6) {
 const gamesDiv = document.getElementById("games");
 
 const gamesTitle = document.createElement("h2");
-gamesTitle.innerHTML = "Online Games";
+gamesTitle.innerHTML = "Javascript Projects";
 gamesTitle.addEventListener('click', () => {
     window.location.href = './games/MyGames.html';
 });
@@ -395,6 +395,8 @@ createGameCard('memoryGame', 'Memory Game');
 createGameCard('screenBuilder', 'Screen Builder');
 createGameCard('MathTrivia', 'Math Trivia');
 createGameCard('MixDrix', 'MixDrix');
+createGameCard('countriesFlags', 'Countries Flags');
+createGameCard('UsersMamagement', 'Users Mamagement');
 
 
 

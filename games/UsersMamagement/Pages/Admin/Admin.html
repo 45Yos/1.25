@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - User Management</title>
+
+    <link rel="stylesheet" href="./Admin.css">
+    <script src="./Admin.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <button id="logOutButton">Log Out</button>
+
+
+
+    <div id="container" class="container">
+
+        <h2>User Management</h2>
+
+
+        <!-- 2 Top Buttons For User Management -->
+        <button id="addUser" class="btn btn-add" onclick="addUser()">Add User</button>
+
+
+        <button id="deleteSelected" class="btn btn-delete" onclick="deleteSelected()">Delete Selected</button>
+
+
+
+
+        <!-- Users Table -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Birth Day</th>
+                    <th>Pet Name</th>
+                    <th>Name Of Father</th>
+                    <th style="width: 10%;">Old Last Name Of Mother</th>
+                    <th></th>
+                    <th style="width:6%; text-align: right;"><input type="checkbox" id="selectAll"
+                            onclick="toggleSelectAll()">
+                    </th>
+                </tr>
+
+
+            </thead>
+            <tbody id="userTable">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

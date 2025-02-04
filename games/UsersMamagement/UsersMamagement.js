@@ -1,3 +1,13 @@
+let isLogin = localStorage.getItem('isLogin');
+
+
+
+if (isLogin === 'true') {
+    window.location.href = './pages/Admin/admin.html';
+}
+
+
+
 const logInScreen = document.createElement('div');
 logInScreen.id = 'logInScreen';
 
@@ -72,6 +82,50 @@ passwordInputDiv.appendChild(passwordInput);
 const logInButton = document.createElement('button');
 logInButton.id = 'logInButton';
 logInButton.innerHTML = 'Log In';
+logInButton.addEventListener('click', () => {
+    const localStorageUsers = JSON.parse(localStorage.getItem('users'));
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    if (localStorageUsers && localStorageUsers.find(user => user.username === username && user.password === password)) {
+        isLogin = true;
+        window.location.href = './pages/Admin/admin.html';
+        localStorage.setItem('isLogin', true);
+    } else {
+        const errorPopup = document.createElement('div');
+        errorPopup.id = 'errorPopup';
+        errorPopup.innerText = 'Incorrect username or password';
+        document.body.appendChild(errorPopup);
+
+        setTimeout(() => {
+            errorPopup.remove();
+        }, 3000);
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Enter' && document.activeElement.tagName === 'INPUT') {
+        logInButton.click();
+    }
+
+})
+
+
+
+
+
+
 logInDiv.appendChild(logInButton);
 
 
@@ -87,8 +141,13 @@ notSingedUpText.innerHTML = 'Not signed up yet?';
 notSingedUpDiv.appendChild(notSingedUpText);
 
 
+const signUpButtonLink = document.createElement('a');
+signUpButtonLink.href = './pages/SignUp/signUp.html';
+notSingedUpDiv.appendChild(signUpButtonLink);
+
+
 const signUpButton = document.createElement('button');
 signUpButton.id = 'signUpButton';
 signUpButton.innerHTML = 'Sign Up';
 
-notSingedUpDiv.appendChild(signUpButton);
+signUpButtonLink.appendChild(signUpButton);

@@ -556,9 +556,9 @@ header nav ul li a {
 
 
 
-/*Area 4, Games Section*/
+/*Area 4, Javscript Section*/
 
-/* Games Section */
+/* Javscript Section */
 #games {
     background: url('./Images/GamesSection.jpeg') no-repeat center center;
     background-size: cover;
@@ -699,8 +699,15 @@ header nav ul li a {
 
 
 
+
+
+
+
+
+
+
 /* מדיה קווירי עבור מסכים עד רוחב של 450 פיקסלים */
-@media (max-width: 450px) {
+@media (max-width: 480px) {
     body {
         font-size: 14px;
         line-height: 1.5;
