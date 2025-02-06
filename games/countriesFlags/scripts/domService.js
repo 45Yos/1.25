@@ -29,6 +29,52 @@ const generateCard = (country) => {
     let heartIcon = document.createElement('i');
     heartIcon.className = "fa fa-heart text-dark";
 
+
+    const checkFavorites = JSON.parse(localStorage.getItem('favoriteCountries'));
+    let heartIconClicked;
+
+    if (checkFavorites) {
+
+        if (checkFavorites.some(country => country.name.common === cardTitle.innerText)) {
+            heartIcon.classList.remove('text-dark');
+            heartIcon.classList.add('text-danger');
+            heartIconClicked = true;
+        } else {
+            heartIcon.classList.remove('text-danger');
+            heartIcon.classList.add('text-dark');
+            heartIconClicked = false;
+        }
+    }
+
+    heartIcon.addEventListener('click', () => {
+
+        const clickSFX = new Audio('./sound/ding.wav');
+        clickSFX.play();
+
+        if (!heartIconClicked) {
+            heartIconClicked = true;
+            const favoriteCountries = JSON.parse(localStorage.getItem('favoriteCountries')) || [];
+            heartIcon.classList.remove('text-dark');
+            heartIcon.classList.add('text-danger');
+
+            favoriteCountries.push(country);
+            localStorage.setItem('favoriteCountries', JSON.stringify(favoriteCountries));
+
+
+        } else {
+            heartIcon.classList.remove('text-danger');
+            heartIcon.classList.add('text-dark');
+            heartIconClicked = false;
+
+            const favoriteCountries = JSON.parse(localStorage.getItem('favoriteCountries')) || [];
+            const favoriteCountriesFiltered = favoriteCountries.filter(country => country.name.common !== cardTitle.innerText);
+
+            localStorage.setItem('favoriteCountries', JSON.stringify(favoriteCountriesFiltered));
+
+        }
+
+    })
+
     cardFooter.appendChild(heartIcon);
 
     cardBody.appendChild(cardTitle);
@@ -49,4 +95,4 @@ const createCards = () => {
     }
 }
 
-export { createCards };
+export { createCards, generateCard };

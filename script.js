@@ -399,6 +399,20 @@ createGameCard('countriesFlags', 'Countries Flags');
 createGameCard('UsersMamagement', 'Users Mamagement');
 
 
+const moreJavaProjects = document.createElement("a");
+moreJavaProjects.id = "moreJavaProjects";
+moreJavaProjects.href = './games/MyGames.html';
+moreJavaProjects.innerHTML = "More Projects";
+moreJavaProjects.style.cursor = "pointer";
+moreJavaProjects.addEventListener('mouseover', () => {
+    moreJavaProjects.style.transform = "scale(1.1)";
+    moreJavaProjects.style.transition = "transform 0.3s ease-in-out";
+});
+moreJavaProjects.addEventListener('mouseout', () => {
+    moreJavaProjects.style.transform = "scale(1)";
+});
+gamesDiv.appendChild(moreJavaProjects);
+
 
 
 

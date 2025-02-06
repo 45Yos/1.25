@@ -571,7 +571,7 @@ header nav ul li a {
     overflow: hidden;
     box-sizing: border-box;
     background-attachment: fixed;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -635,6 +635,21 @@ header nav ul li a {
 
 .play-button:hover {
     background-color: #ff69b4;
+}
+
+
+#moreJavaProjects {
+    margin-top: 5%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    font-family: "Syncopate", serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-weight: 500;
+    transition: 0.7s;
 }
 
 
