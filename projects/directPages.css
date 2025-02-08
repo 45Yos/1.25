@@ -84,6 +84,7 @@ body {
     gap: 30px;
     margin-top: 1%;
     margin-bottom: 1%;
+
 }
 
 .logo {
@@ -116,15 +117,31 @@ body {
 }
 
 .logo.html {
-    background: radial-gradient(circle, #ff5722, #e64a19);
+    background: radial-gradient(circle, #d5d5d5, #d5d5d5);
+}
+
+.logo.html img {
+    width: 90%;
 }
 
 .logo.css {
-    background: radial-gradient(circle, #2962ff, #0d47a1);
+    background: radial-gradient(circle, #d5d5d5, #d5d5d5);
+}
+
+.logo.css img {
+    width: 55%;
 }
 
 .logo.sass {
     background: radial-gradient(circle, #e91e63, #880e4f);
+}
+
+.logo.bootstrap {
+    background: radial-gradient(circle, #d5d5d5, #d5d5d5);
+}
+
+.logo.bootstrap img {
+    width: 70%;
 }
 
 .logo.js {

@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Serif Todhri", serif;
+    background: url(./images/WeatherBackground.webp) no-repeat center center/cover;
+}
+
+
+.container {
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(135deg, #87CEEB, #4A708B);
+    border-radius: 20px;
+    padding: 20px;
+    opacity: 0.9;
+    box-shadow: 10px 10px 10px rgba(82, 32, 32 /20%);
+}
+
+
+input {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+input:focus {
+    outline-color: rgb(84, 84, 139);
+}
+
+
+button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: scale(1.05);
+}
