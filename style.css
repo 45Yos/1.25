@@ -777,6 +777,9 @@ header nav ul li a {
         padding: 0;
     }
 
+
+    /* Top Section */
+
     header {
         position: static;
 
@@ -854,11 +857,20 @@ header nav ul li a {
         height: 300px;
     }
 
+
+
+    /* About Section */
+
     #about {
         padding: 10px;
         text-align: center;
         height: auto;
     }
+
+
+
+
+    /* Gallery Section */
 
     #gallery {
         padding-top: 30%;
@@ -877,22 +889,59 @@ header nav ul li a {
         font-size: 22px;
     }
 
+
+
+
+
+
+
+    /* Games Section */
+
     #games {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         background-position: 0 0;
         text-align: center;
         height: auto;
     }
 
+
+    #games h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-family: 'Syncopate', serif;
+    }
+
     .game-container {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        width: 80%;
         gap: 20px;
         margin: 0 10%;
     }
+
+
+    #moreJavaProjects {
+        font-size: 20px;
+    }
+
+    #moreJavaProjects:hover {
+        font-size: 22px;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Footer */
+
 
     footer .footer-container {
         flex-direction: column;

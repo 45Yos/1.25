@@ -8,6 +8,10 @@ if (isLogin === 'true') {
 
 
 
+
+
+
+//Log In Window
 const logInScreen = document.createElement('div');
 logInScreen.id = 'logInScreen';
 
@@ -79,6 +83,17 @@ passwordInputDiv.appendChild(passwordInput);
 
 
 
+
+
+
+
+
+
+
+
+
+
+//Log In Button
 const logInButton = document.createElement('button');
 logInButton.id = 'logInButton';
 logInButton.innerHTML = 'Log In';
@@ -111,8 +126,7 @@ logInButton.addEventListener('click', () => {
 
 
 
-
-
+//Enter Key Down
 document.addEventListener('keydown', (event) => {
 
     if (event.key === 'Enter' && document.activeElement.tagName === 'INPUT') {
@@ -122,14 +136,15 @@ document.addEventListener('keydown', (event) => {
 })
 
 
-
-
-
-
 logInDiv.appendChild(logInButton);
 
 
 
+
+
+
+
+//Not Singed Up?
 const notSingedUpDiv = document.createElement('div');
 notSingedUpDiv.id = 'notSingedUpDiv';
 logInDiv.appendChild(notSingedUpDiv);
@@ -141,8 +156,15 @@ notSingedUpText.innerHTML = 'Not signed up yet?';
 notSingedUpDiv.appendChild(notSingedUpText);
 
 
+
+
+
+
+
+
+//Sign Up Button
 const signUpButtonLink = document.createElement('a');
-signUpButtonLink.href = './pages/SignUp/signUp.html';
+signUpButtonLink.href = './Pages/SignUp/signUp.html';
 notSingedUpDiv.appendChild(signUpButtonLink);
 
 
